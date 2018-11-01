@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Concert+One');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    background: #f7f7f7;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.header {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.header .header-title h1 {
+    font-family: 'Concert One', cursive;
+    font-size: 40px;
+    color: #3d3c3c;
+}
+
+.container {
+
+}
+
+.container div {
+    background-image: url("/images/sample_img_01.jpg");
+}
+
+/* https://medium.com/@andybarefoot/stretching-the-grid-5-fun-ways-to-use-css-grid-5931166f467f */

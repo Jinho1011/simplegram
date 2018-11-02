@@ -29,6 +29,34 @@ body {
     box-shadow: 0 6px 12px 0 rgba(21, 19, 19, .1);
 }
 
+/* USER */
+
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.home-title h1 {
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.home-btn {
+    padding: 20px 80px;
+    background: #999;
+}
+
+/* NO USER */
+
 .login {
     display: flex;
     flex-direction: column;

@@ -11,34 +11,26 @@
 
 <body>
     <div class="wrapper">
+        <% if(user){ %>
         <div class="header">
             <div class="header-title">
-                <h1>Jinho's page</h1>
+                <h1>
+                    <%= user.nick %>'s page</h1>
             </div>
         </div>
         <div class="container">
-            <div class="img-wrapper">
-                <img src="/images/sample_img_01.jpg" alt="">
+            <div class="img-upload">
+                <form action="/post" method="POST" enctype="multipart/form-data">
+                    <h1>Upload Your Image!</h1>
+                    <input type="file" accept="image/*">
+                </form>
             </div>
             <div class="img-wrapper">
-                <img src="/images/sample_img_02.jpg" alt="">
+                
             </div>
-            <div class="img-wrapper">
-                <img src="/images/sample_img_03.jpg" alt="">
-            </div>
-            <div class="img-wrapper">
-                <img src="/images/sample_img_04.jpg" alt="">
-            </div>
-            <div class="img-wrapper">
-                <img src="/images/sample_img_05.jpg" alt="">
-            </div>
-            <div class="img-wrapper">
-                <img src="/images/sample_img_06.jpg" alt="">
-            </div>
-            <div class="img-wrapper">
-                <img src="/images/sample_img_07.jpg" alt="">
-            </div>
+            <!-- <img src="/images/sample_img_01.jpg" alt=""> -->
         </div>
+        <% { %>
     </div>
 </body>
 

@@ -28,6 +28,17 @@ body {
     justify-content: center;
 }
 
+.img-upload {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-upload h1 {
+    font-family: 'Concert One', cursive;
+    font-size: 20px;
+    color: #3d3c3c;
+}
+
 .img-wrapper {
     display: flex;
     flex-direction: column;

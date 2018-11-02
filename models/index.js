@@ -8,7 +8,7 @@ const sequelize = new Sequelize(
 )
 
 db.sequelize = sequelize
-db.Sequelize = sequelize
+db.Sequelize = Sequelize
 db.User = require('./user')(sequelize, Sequelize)
 db.Post = require('./post')(sequelize, Sequelize)
 db.User.hasMany(db.Post)

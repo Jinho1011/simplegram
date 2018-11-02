@@ -8,6 +8,7 @@ const passport = require('passport')
 const { sequelize } = require('./models')
 const passportConfig = require('./passport')
 const indexRouter = require('./routes/index')
+const authRouter = require('./routes/auth')
 
 const app = express()
 sequelize.sync()
@@ -31,9 +32,13 @@ app.use(session({
     secure: false
   }
 }))
+
 app.use(flash())
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.use('/', indexRouter)
+app.use('/auth', authRouter)
 
 // error handler
 app.use(function (err, req, res, next) {

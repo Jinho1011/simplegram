@@ -1,29 +1,30 @@
 const express = require('express')
 const router = express.Router()
+const { isLoggedIn, isNotLoggedIn } = require('./middlewares')
 
 /* GET login page. */
-router.get('/', function (req, res, next) {
+router.get('/', isNotLoggedIn, function (req, res, next) {
   res.render('login', {
     title: 'Dong',
-    user: null,
+    user: req.user,
     loginError: req.flash('loginError')
   })
 })
 
 /* GET join page. */
-router.get('/join', function (req, res, next) {
+router.get('/join', isNotLoggedIn, function (req, res, next) {
   res.render('join', {
     title: 'Dong',
-    user: null,
+    user: req.user,
     joinError: req.flash('joinError')
   })
 })
 
 /* GET home page. */
-router.get('/home', function (req, res, next) {
+router.get('/home', isLoggedIn, function (req, res, next) {
   res.render('home', {
     title: 'Dong',
-    user: null
+    user: req.user
   })
 })
 

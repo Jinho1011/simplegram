@@ -13,7 +13,7 @@ body {
 
 .header {
     padding: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .header .header-title h1 {
@@ -23,11 +23,23 @@ body {
 }
 
 .container {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.container div {
-    background-image: url("/images/sample_img_01.jpg");
+.img-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 50px;
 }
 
-/* https://medium.com/@andybarefoot/stretching-the-grid-5-fun-ways-to-use-css-grid-5931166f467f */
+.img-wrapper img {
+    width: 60%;
+    height: auto;
+    box-shadow: 0 10px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+}

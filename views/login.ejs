@@ -12,28 +12,17 @@
 <body>
     <div class="container">
         <div class="content box-shadow">
-            <% if(user){ %>
-            <div class="home">
-                <div class="home-title">
-                    <h1>Hello, <%= user.nick %>!</h1>
-                </div>
-                <div class="home-btn">
-                    <a href="/home">Let's Look around!</a>
-                </div>
-            </div>
-            <% } else { %>
             <div class="login">
                 <div class="box-title">
                     Login
                 </div>
-                <form action="/auth/join" method="POST" class="login-form">
-                    <input type="text" placeholder="id" type="id" name="id" required autofocus>
-                    <input type="password" placeholder="password" type="password" name="password" required>
+                <form action="/auth/login" method="POST" class="login-form">
+                    <input type="email" placeholder="email" name="email" required autofocus>
+                    <input type="password" placeholder="password" name="password" required>
                     <button type="submit">Login</button>
                     <a href="/join">Register</a>
                 </form>
             </div>
-            <% } %>
         </div>
     </div>
 </body>

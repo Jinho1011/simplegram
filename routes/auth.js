@@ -50,7 +50,7 @@ router.post('/login', isNotLoggedIn, (req, res, next) => {
 router.get('/logout', isLoggedIn, (req, res) => {
   req.logout()
   req.session.destroy()
-  res.direct('/')
+  return res.direct('/')
 })
 
 module.exports = router

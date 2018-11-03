@@ -3,7 +3,7 @@ const router = express.Router()
 const { isLoggedIn, isNotLoggedIn } = require('./middlewares')
 
 /* GET login page. */
-router.get('/', isNotLoggedIn, function (req, res, next) {
+router.get('/', isNotLoggedIn, (req, res, next) => {
   res.render('login', {
     title: 'Dong',
     user: req.user,
@@ -12,7 +12,7 @@ router.get('/', isNotLoggedIn, function (req, res, next) {
 })
 
 /* GET join page. */
-router.get('/join', isNotLoggedIn, function (req, res, next) {
+router.get('/join', isNotLoggedIn, (req, res, next) => {
   res.render('join', {
     title: 'Dong',
     user: req.user,
@@ -21,7 +21,7 @@ router.get('/join', isNotLoggedIn, function (req, res, next) {
 })
 
 /* GET home page. */
-router.get('/home', isLoggedIn, function (req, res, next) {
+router.get('/home', isLoggedIn, (req, res, next) => {
   res.render('home', {
     title: 'Dong',
     user: req.user

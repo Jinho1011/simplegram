@@ -24,7 +24,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser('nodebirdsecret'))
 app.use(session({
-  resave: false,
+  resave: true,
   saveUninitialized: false,
   secret: 'nodebirdsecret',
   cookie: {
